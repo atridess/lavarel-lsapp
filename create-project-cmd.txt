@@ -1,0 +1,4 @@
+# creating commant
+# composer create-project laravel/laravel <project-name>
+
+composer create-project laravel/laravel lsapp
