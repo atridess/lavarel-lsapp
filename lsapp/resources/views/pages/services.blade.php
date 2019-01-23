@@ -1,15 +1,13 @@
-<!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{config('app.name', 'LSAPP')}}</title>
+@extends('layouts.app')
 
-        <!-- Styles -->
-
-    </head>
-    <body>
-      <h1>Services</h1>
+@section('content')
+      <h1>{{$title}}</h1>
       <p>Try our amazing services.</p>
-    </body>
-</html>
+      @if(count($services) > 0)
+        <ul class="list-group">
+          @foreach($services as $servise)
+            <li class="list-group-item">{{$servise}}</li>
+          @endforeach
+      </ul>
+      @endif
+@endsection
