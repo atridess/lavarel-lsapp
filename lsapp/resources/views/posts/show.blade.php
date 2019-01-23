@@ -1,0 +1,16 @@
+@extends('layouts.app')
+
+@section('content')
+  <a href="/posts" class="btn btn-primary" role="button">Go Back</a>
+  <br><br>
+  <h1>{{$post->title}}</h1>
+
+  <div>
+    {{$post->body}}
+  </div>
+
+  <hr>
+
+  <small>Created on {{$post->created_at}}</small><br>
+  <small>Last update {{$post->updated_at}}</small>
+@endsection
