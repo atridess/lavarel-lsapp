@@ -15,8 +15,9 @@
             @endif
           </div>
         </div>
-        {{$posts->links()}}
       @endforeach
+      <br>
+      {{$posts->links()}}
   @else
     <p>No posts found</p>
   @endif
