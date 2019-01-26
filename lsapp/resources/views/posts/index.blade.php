@@ -13,12 +13,17 @@
             @else
               <small>Updated on {{$post->updated_at}}</small>
             @endif
+            <br>
+            <small>by {{$post->user['name']}}</small>
           </div>
         </div>
+        <br>
       @endforeach
       <br>
       {{$posts->links()}}
   @else
-    <p>No posts found</p>
+    <div class="alert alert-primary" role="alert">
+      There is no Posts created yet
+    </div>
   @endif
 @endsection
