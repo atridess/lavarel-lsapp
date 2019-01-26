@@ -29,3 +29,7 @@ Route::get('/hello',function(){
 Route::get('/users/{id}/{name}', function($id,$name){
   return 'This is user '.$name.' with an id of  '.$id;
 });
+
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
