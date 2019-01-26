@@ -27,7 +27,7 @@
                       @foreach ($posts as $post)
                         <tr>
                           <td>
-                            <a class="" href="/posts/{{$post->id}}/edit">{{$post->title}}</a>
+                            <a class="" href="/posts/{{$post->id}}">{{$post->title}}</a>
                             <br>
                             <small>Updated: {{$post->updated_at}}</small>
                           </td>
@@ -36,7 +36,7 @@
                             {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method' =>'POST', 'class' => 'float-right' ])!!}
                               {{Form::hidden('_method', 'DELETE')}}
                               {{Form::submit('Delete', ['class'=> 'btn btn-danger'])}}
-                            {!!Form::close() !!}
+                            {!!Form::close()!!}
                           </td>
                         </tr>
                       @endforeach
